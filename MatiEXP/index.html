@@ -14,65 +14,91 @@
             background-color:#FDFBFB;
         }
         .storys{
-            width: 100px;
-            height: 100px;
+            width: 85px;
+            height: 85px;
             border-radius: 999px;  
             margin-left: 20px;
             border-style: solid;
             padding: 5px;
             border-color: #E60997;
+            cursor: pointer;
         }
         .animacao:hover{
-            transform: scale(1.05);
+            transform: scale(1.04);
         }
         .animacao{
             transition: transform 0.3s ease-out;
             cursor: pointer;
         }
+        .animacao2:hover{
+            transform: scale(1.01);
+        }
+        .animacao2{
+            transition: transform 0.2s ease-out;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <main id="menu" style="position: fixed; width: 300px; height: 100%; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.164);">
-        <h1 style="margin-left: 10px;">MatiExperience</h1>
-        <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;"><img src="ICONES/home.png" alt="" style="width: 40px; position: absolute; top: 200px; left: 20px;"><span style="position: absolute; top: 210px; width: 100px; left: 45px;">Home</span></button>
+    <main id="menu" style="position: fixed; width: 300px; height: 100%; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.164); padding-left: 10px;">
+        <h1 style="margin-left: 10px; margin-top: 20px; cursor: pointer;" ><a href="index.html" style="text-decoration: none; color: black; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; ">MatiExperience</a></h1>
+        <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/home.png" alt="" style="width: 30px; position: absolute; top: 207px; left: 20px;"><span style="position: absolute; top: 210px; width: 100px; left: 43px;"><a href="index.html" style="text-decoration: none; color: black;">Inicio</a></span></button>
+        <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/pesquisa.png" alt="" style="width: 30px; position: absolute; top: 270px; left: 20px;"><span style="position: absolute; top: 270px; width: 100px; left: 55px;">Explorar</span></button>
+        <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/comentario.png" alt="" style="width: 30px; position: absolute; top: 330px; left: 20px;"><span style="position: absolute; top: 330px; width: 100px; left: 65px;">Conversas</span></button>
+        <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/notificacao.png" alt="" style="width: 30px; position: absolute; top: 390px; left: 20px;"><span style="position: absolute; top: 390px; width: 100px; left: 63px;">Atividade</span></button>
+        <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/adicionar.png" alt="" style="width: 30px; position: absolute; top: 450px; left: 20px;"><span style="position: absolute; top: 450px; width: 100px; left: 41px;">Criar</span></button>
+        <a href="meuPerfil.html" style="text-decoration: none; color: black;"><button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute; cursor: pointer;"><div style="overflow: hidden; border-radius: 999px; width: 50px; height: 50px; margin-top: 930px; margin-left: 10px;"><img src="ICONES/taylor.webp" alt="" style="width: 50px;"></div><span style="position: absolute; top: 940px; width: 200px; left: 30px;">Meu Perfil</span></button></a>
     </main>
-    <main style=" width: 900px; margin: auto; overflow-y: auto; background-color: #FFFFFF;">
-        <header id="storys" style="width: 900px; height: 145px; margin-bottom: 30px; overflow-x: auto; overflow-y: hidden;  scrollbar-color: transparent transparent; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.048);">
+    <button style="position: fixed; left: 2020px; top: 950px; width: 70px; height: 70px; background-color: #FFFFFF; border: 0px; border-radius: 999px; cursor: pointer; " class="animacao">
+        <img src="/ICONES/comentario.png" alt="" width="50px">
+    </button>
+    <main style=" width: 900px; margin: auto; background-color: #FFFFFF;">
+        <header id="storys" style="width: 900px; height: 145px; margin-bottom: 30px ;border-style: solid; border-width: 1px ; border-color: rgba(0, 0, 0, 0.24);">
             <div style="width: 1500px; margin-top: 10px;">
-                <img src="ICONES/taylor.webp" alt="" class="storys">
-                <img src="ICONES/taylor.webp" alt="" class="storys">
-                <img src="ICONES/taylor.webp" alt="" class="storys">
-                <img src="ICONES/taylor.webp" alt="" class="storys">
-                <img src="ICONES/taylor.webp" alt="" class="storys">
-
+                <img src="ICONES/arnold.jpg" alt="" class="storys">
+                <img src="ICONES/leo.jpg" alt="" class="storys">
+                <img src="ICONES/gustavoTop.jpg" alt="" class="storys">
+                <img src="ICONES/flavio.jpg" alt="" class="storys">
+                <img src="ICONES/willian.jpg" alt="" class="storys">
+                <img src="ICONES/mia.jpg" alt="" class="storys">
+                <img src="ICONES/kid.jpg" alt="" class="storys">
+            </div>
+            <div>
+                <span style="margin-left: 20px;">@arnold_schz</span>
+                <span style="margin-left: 20px;">@leozin_monstro</span>
+                <span style="margin-left: 15px;">@gustavochad</span>
+                <span style="margin-left: 23px;">@flavioreidelas</span>
+                <span style="margin-left: 20px;">@willianlendario</span>
+                <span style="margin-left: 32px;">@miakay</span>
+                <span style="margin-left: 65px;">@kid_33</span>
             </div>
         </header>
-        <main>
+        <main style="margin-bottom: 40px; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.075); padding-bottom: 30px;">
             <header id="perfil" style="width: 400px; height: 60px; display: flex;">
-                <div style="border-radius: 999px; height: 60px; width: 60px; margin-left: 10px; overflow: hidden;">
-                    <img src="ICONES/taylor.webp" alt="" style="width: 60px;">
+                <div style="border-radius: 999px; height: 60px; width: 60px; margin-left: 10px; overflow: hidden; cursor: pointer; ">
+                    <img src="ICONES/gustavoTop.jpg" alt="" style="width: 60px; ">
                 </div>
-                <h2 style="margin-left: 10px; font-size: 28px;">@taylor_001</h2>
+                <h2 style="margin-left: 10px; font-size: 22px;">@gustavochad</h2>
             </header>
             <div id="feed">
-                <div style="height: 600px; width: 600px; background-color: white; margin: auto;">
-                    <img src="ICONES/taylor.webp" alt="">
+                <div style="height: 600px; width: 600px; background-color: white; margin: auto; overflow: hidden;">
+                    <img src="ICONES/gustavo.png" alt="" style="border-radius: 5px; width: 600px; ">
                 </div>
             </div>
             <div id="funcoes">
-                <img src="ICONES/like.webp" alt="" style="width: 50px; margin-left: 160px; margin-top: 10px;" class="animacao">
-                <img src="ICONES/comentario.png" alt="" style="width: 45px; margin-left: 20px; margin-top: 10px;" class="animacao">
-                <img src="ICONES/compartilhar.png" alt="" style="width: 45px; margin-left: 25px; margin-top: 10px;" class="animacao">
+                <img src="ICONES/like.webp" alt="" style="width: 40px; margin-left: 150px; margin-top: 10px;" class="animacao">
+                <img src="ICONES/comentario.png" alt="" style="width: 35px; margin-left: 20px; margin-top: 10px;" class="animacao">
+                <img src="ICONES/compartilhar.png" alt="" style="width: 35px; margin-left: 25px; margin-top: 10px;" class="animacao">
+            </div>
+            <div style="width: 600px; text-align: justify; margin: auto; margin-top: 20px;">
+                <h3>162 curtidas</h3><br>
+                <p><b>@gustavochad</b> vai tomando.</p><br>
             </div>
         </main>
+        
         
     </main>
 </body>
 <script>
-  const storys = document.getElementById('storys');
-  storys.addEventListener('wheel', (e) => {
-    e.preventDefault();
-    storys.scrollLeft += e.deltaY; 
-  });
 </script>
 </html>
