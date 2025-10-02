@@ -9,6 +9,14 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             padding: 0;
             margin: 0;
+            zoom: 97%;
+            z-index: 1;
+            position: relative;
+        }
+        html,body{
+            margin: 0;
+            padding: 0;
+            border: 0;
         }
         body{
             background-color:#FDFBFB;
@@ -39,66 +47,125 @@
         }
     </style>
 </head>
+
 <body>
-    <main id="menu" style="position: fixed; width: 300px; height: 100%; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.164); padding-left: 10px;">
-        <h1 style="margin-left: 10px; margin-top: 20px; cursor: pointer;" ><a href="index.html" style="text-decoration: none; color: black; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; ">MatiExperience</a></h1>
-        <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/home.png" alt="" style="width: 30px; position: absolute; top: 207px; left: 20px;"><span style="position: absolute; top: 210px; width: 100px; left: 43px;"><a href="index.html" style="text-decoration: none; color: black;">Inicio</a></span></button>
-        <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/pesquisa.png" alt="" style="width: 30px; position: absolute; top: 270px; left: 20px;"><span style="position: absolute; top: 270px; width: 100px; left: 55px;">Explorar</span></button>
-        <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/comentario.png" alt="" style="width: 30px; position: absolute; top: 330px; left: 20px;"><span style="position: absolute; top: 330px; width: 100px; left: 65px;">Conversas</span></button>
-        <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/notificacao.png" alt="" style="width: 30px; position: absolute; top: 390px; left: 20px;"><span style="position: absolute; top: 390px; width: 100px; left: 63px;">Atividade</span></button>
-        <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/adicionar.png" alt="" style="width: 30px; position: absolute; top: 450px; left: 20px;"><span style="position: absolute; top: 450px; width: 100px; left: 41px;">Criar</span></button>
-        <a href="meuPerfil.html" style="text-decoration: none; color: black;"><button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute; cursor: pointer;"><div style="overflow: hidden; border-radius: 999px; width: 50px; height: 50px; margin-top: 930px; margin-left: 10px;"><img src="ICONES/taylor.webp" alt="" style="width: 50px;"></div><span style="position: absolute; top: 940px; width: 200px; left: 30px;">Meu Perfil</span></button></a>
-    </main>
-    <button style="position: fixed; left: 2020px; top: 950px; width: 70px; height: 70px; background-color: #FFFFFF; border: 0px; border-radius: 999px; cursor: pointer; " class="animacao">
-        <img src="/ICONES/comentario.png" alt="" width="50px">
-    </button>
-    <main style=" width: 900px; margin: auto; background-color: #FFFFFF;">
-        <header id="storys" style="width: 900px; height: 145px; margin-bottom: 30px ;border-style: solid; border-width: 1px ; border-color: rgba(0, 0, 0, 0.24);">
-            <div style="width: 1500px; margin-top: 10px;">
-                <img src="ICONES/arnold.jpg" alt="" class="storys">
-                <img src="ICONES/leo.jpg" alt="" class="storys">
-                <img src="ICONES/gustavoTop.jpg" alt="" class="storys">
-                <img src="ICONES/flavio.jpg" alt="" class="storys">
-                <img src="ICONES/willian.jpg" alt="" class="storys">
-                <img src="ICONES/mia.jpg" alt="" class="storys">
-                <img src="ICONES/kid.jpg" alt="" class="storys">
-            </div>
-            <div>
-                <span style="margin-left: 20px;">@arnold_schz</span>
-                <span style="margin-left: 20px;">@leozin_monstro</span>
-                <span style="margin-left: 15px;">@gustavochad</span>
-                <span style="margin-left: 23px;">@flavioreidelas</span>
-                <span style="margin-left: 20px;">@willianlendario</span>
-                <span style="margin-left: 32px;">@miakay</span>
-                <span style="margin-left: 65px;">@kid_33</span>
-            </div>
-        </header>
-        <main style="margin-bottom: 40px; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.075); padding-bottom: 30px;">
-            <header id="perfil" style="width: 400px; height: 60px; display: flex;">
-                <div style="border-radius: 999px; height: 60px; width: 60px; margin-left: 10px; overflow: hidden; cursor: pointer; ">
-                    <img src="ICONES/gustavoTop.jpg" alt="" style="width: 60px; ">
-                </div>
-                <h2 style="margin-left: 10px; font-size: 22px;">@gustavochad</h2>
-            </header>
-            <div id="feed">
-                <div style="height: 600px; width: 600px; background-color: white; margin: auto; overflow: hidden;">
-                    <img src="ICONES/gustavo.png" alt="" style="border-radius: 5px; width: 600px; ">
-                </div>
-            </div>
-            <div id="funcoes">
-                <img src="ICONES/like.webp" alt="" style="width: 40px; margin-left: 150px; margin-top: 10px;" class="animacao">
-                <img src="ICONES/comentario.png" alt="" style="width: 35px; margin-left: 20px; margin-top: 10px;" class="animacao">
-                <img src="ICONES/compartilhar.png" alt="" style="width: 35px; margin-left: 25px; margin-top: 10px;" class="animacao">
-            </div>
-            <div style="width: 600px; text-align: justify; margin: auto; margin-top: 20px;">
-                <h3>162 curtidas</h3><br>
-                <p><b>@gustavochad</b> vai tomando.</p><br>
-            </div>
+    <div id="conteudo">
+        <main id="menu" style="position: fixed; width: 260px; height: 100%; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.164); padding-left: 10px;">
+            <h1 style="margin-left: 10px; margin-top: 20px; cursor: pointer;" ><a href="index.html" style="text-decoration: none; color: black; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; ">MatiExperience</a></h1>
+            <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/home.png" alt="" style="width: 30px; position: absolute; top: 207px; left: 20px;"><span style="position: absolute; top: 210px; width: 100px; left: 43px;"><a href="index.html" style="text-decoration: none; color: black;">Inicio</a></span></button>
+            <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/pesquisa.png" alt="" style="width: 30px; position: absolute; top: 270px; left: 20px;"><span style="position: absolute; top: 270px; width: 100px; left: 55px;">Explorar</span></button>
+            <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/comentario.png" alt="" style="width: 30px; position: absolute; top: 330px; left: 20px;"><span style="position: absolute; top: 330px; width: 100px; left: 65px;">Conversas</span></button>
+            <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/notificacao.png" alt="" style="width: 30px; position: absolute; top: 390px; left: 20px;"><span style="position: absolute; top: 390px; width: 100px; left: 63px;">Atividade</span></button>
+            <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/adicionar.png" alt="" style="width: 30px; position: absolute; top: 450px; left: 20px;"><span style="position: absolute; top: 450px; width: 100px; left: 41px;">Criar</span></button>
+            <a href="meuPerfil.html" style="text-decoration: none; color: black;"><button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute; cursor: pointer;"><div style="overflow: hidden; border-radius: 999px; width: 50px; height: 50px; margin-top: 530px; margin-left: 15px;"><img src="ICONES/taylor.webp" alt="" style="width: 50px;"></div><span style="position: absolute; top: 540px; width: 200px; left: 30px;">Meu Perfil</span></button></a>
         </main>
-        
-        
+        <button style="position: fixed; left: 2020px; top: 950px; width: 70px; height: 70px; border: 0px; border-radius: 999px; cursor: pointer; background-color: transparent;" class="animacao">
+            <img src="ICONES/comentario.png" alt="" width="50px">
+        </button>
+        <main style=" width: 850px; margin: auto;">
+            <header id="storys" style="width: 900px; height: 145px; margin-bottom: 30px ; margin-bottom: 50px;">
+                <div style="width: 1500px; margin-top: 10px;">
+                    <img src="ICONES/arnold.jpg" alt="" class="storys" onclick="storys(this)">
+                    <img src="ICONES/leo.jpg" alt="" class="storys" onclick="storys(this)">
+                    <img src="ICONES/gustavoTop.jpg" alt="" class="storys" onclick="storys(this)">
+                    <img src="ICONES/flavio.jpg" alt="" class="storys" onclick="storys(this)">
+                    <img src="ICONES/willian.jpg" alt="" class="storys" onclick="storys(this)">
+                    <img src="ICONES/mia.jpg" alt="" class="storys" onclick="storys(this)">
+                    <img src="ICONES/kid.jpg" alt="" class="storys" onclick="storys(this)">
+                </div>
+                <div>
+                    <span style="margin-left: 40px;">Seu Story</span>
+                    <span style="margin-left: 30px;">@leozin_monstro</span>
+                    <span style="margin-left: 18px;">@gustavochad</span>
+                    <span style="margin-left: 23px;">@flavioreidelas</span>
+                    <span style="margin-left: 20px;">@willianlendario</span>
+                    <span style="margin-left: 35px;">@miakay</span>
+                    <span style="margin-left: 65px;">@kid_33</span>
+                </div>
+            </header>
+            <main style="margin-bottom: 40px; padding-bottom: 30px; background-color: transparent;">
+                <header id="perfil" style="width: 400px; height: 60px; display: flex;">
+                    <div style="border-radius: 999px; height: 60px; width: 60px; margin-left: 10px; overflow: hidden; cursor: pointer; background-color: transparent;">
+                        <img src="ICONES/gustavoTop.jpg" alt="" style="width: 60px; ">
+                    </div>
+                    <h2 style="margin-left: 10px; font-size: 22px;">@gustavochad</h2>
+                </header>
+                <div id="feed" style="background-color: transparent;">
+                    <div style="height: 600px; width: 600px; background-color: transparent; margin: auto; overflow: hidden;">
+                        <img src="ICONES/gustavo.png" alt="" style="border-radius: 5px; width: 600px; ">
+                    </div>
+                </div>
+                <div id="funcoes">
+                    <img src="ICONES/like.webp" alt="" style="width: 40px; margin-left: 150px; margin-top: 10px;" class="animacao">
+                    <img src="ICONES/comentario.png" alt="" style="width: 35px; margin-left: 20px; margin-top: 10px;" class="animacao">
+                    <img src="ICONES/compartilhar.png" alt="" style="width: 35px; margin-left: 25px; margin-top: 10px;" class="animacao">
+                </div>
+                <div style="width: 600px; text-align: justify; margin: auto; margin-top: 20px;">
+                    <h3>162 curtidas</h3><br>
+                    <p><b>@gustavochad</b> vai tomando.</p><br>
+                </div>
+            </main>
+    </div>
+        <div style="width: 100%; height: 1030px; background-color: transparent; position: absolute; top: 0; margin: 0; padding: 0; z-index: 0;" id="fundo" onclick="storySair(this)" >
+            
+    <span>
+        </div>
+            <input style="width: 480px; height: 40px; position: absolute; left: 750px; border-radius: 50px; border-style: solid; top: 890px; z-index: 0; border-width: 2px; border-color: #FDFBFB; background-color: transparent; padding-left: 20px; font-size: 16px; color: #FDFBFB;" placeholder="Digite algo para o gustavinho" id="inputStory" class="elementosStory">
+        </input>
+            <div id="storyExpandido" style="width: 600px; height: 900px;position: absolute; top: 50px; left: 730px; z-index: 0; overflow: hidden; border-radius: 10px;" class="elementosStory">
+        </div>
+            <div style="width: 50px; height: 40px; position: absolute; top: 888px; left: 1270px; z-index: 0; " class="elementosStory" id="directStory">
+                <img src="ICONES/direct.png" alt="" style="width: 50px; cursor: pointer;">
+            </div>
+                <div style="width: 550px; height: 3px; background-color: #FDFBFB; position: absolute; top: 65px; left: 755px; z-index: 0; border-radius: 10px;" class="elementosStory" id="barraStory">
+            </div>
+                <header id="perfilStory" style="width: 400px; height: 60px; display: flex; position: absolute; top: 85px; left: 740px; z-index: 0; display: none;" class="elementosStory">
+                        <div style="border-radius: 999px; height: 60px; width: 60px; margin-left: 10px; overflow: hidden; cursor: pointer; background-color: transparent; border-style: solid; border-color: #E60997;">
+                            <img src="ICONES/gustavoTop.jpg" alt="" style="width: 60px; ">
+                        </div>
+                        <h2 style="margin-left: 10px; font-size: 20px; color: #FDFBFB;">@gustavochad</h2>
+            </header>
+    </span>
     </main>
 </body>
 <script>
+    function storys(elemento){
+        const inputStory = document.getElementById('inputStory');
+        const directStory = document.getElementById('directStory');
+        const barraStory = document.getElementById('barraStory');
+        const perfilStory = document.getElementById('perfilStory');
+        const fundo = document.getElementById('fundo');
+        const div = document.getElementById('storyExpandido');
+        elemento.style.borderColor = '#8C8C8C'
+        inputStory.style.zIndex = '3';
+        directStory.style.zIndex = '3';
+        barraStory.style.zIndex = '3';
+        perfilStory.style.zIndex = '3';
+        perfilStory.style.display = 'flex';
+        div.style.zIndex = '2';
+        div.style.backgroundImage = "url('ICONES/gustavo.png')";
+        div.style.backgroundSize = 'cover';
+        div.style.backgroundPosition = 'center';
+        div.style.backgroundRepeat = 'no-repeat';
+        fundo.style.backgroundColor = '#000000';
+        fundo.style.zIndex = '1';
+    }
+    function storySair(elemento){
+        const inputStory = document.getElementById('inputStory');
+        const directStory = document.getElementById('directStory');
+        const barraStory = document.getElementById('barraStory');
+        const perfilStory = document.getElementById('perfilStory');
+        const fundo = document.getElementById('fundo');
+        const div = document.getElementById('storyExpandido');
+        inputStory.style.zIndex = '0';
+        directStory.style.zIndex = '0';
+        barraStory.style.zIndex = '0';
+        perfilStory.style.zIndex = '0';
+        perfilStory.style.display = 'none';
+        fundo.style.zIndex = '0';
+        div.style.zIndex = '0';
+        fundo.style.backgroundColor = 'transparent';
+        div.style.backgroundImage = "url()";
+    }
 </script>
 </html>
