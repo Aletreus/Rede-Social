@@ -9,7 +9,7 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             padding: 0;
             margin: 0;
-            zoom: 97%;
+            zoom: 97.5%;
             z-index: 1;
             position: relative;
         }
@@ -45,27 +45,62 @@
             transition: transform 0.2s ease-out;
             cursor: pointer;
         }
+        #botaoAbrirConversa.girando {
+            transform: rotate(-180deg);
+            
+        }
+        #botaoAbrirConversa{
+            transition: transform 1.3s ease;
+            transform: rotate(0deg);
+        }
+        #botaoFecharConversa.girando{
+            transform: rotate(180deg);
+        }
+        #botaoFecharConversa{
+            transition: transform 1.3s ease;
+        }
+        #menuConversas {
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            opacity: 0;
+            transform: translateY(100%);    
+            z-index: 0;
+                
+        }
+
+        #menuConversas.aberto {
+            opacity: 1;
+            transform: translateY(0);   
+            z-index: 2;
+        }
     </style>
 </head>
 
 <body>
     <div id="conteudo">
         <main id="menu" style="position: fixed; width: 260px; height: 100%; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.164); padding-left: 10px;">
-            <h1 style="margin-left: 10px; margin-top: 20px; cursor: pointer;" ><a href="index.html" style="text-decoration: none; color: black; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; ">MatiExperience</a></h1>
+            <h1 style="margin-left: 10px; margin-top: 20px; cursor: pointer;" ><a href="index.html" style="text-decoration: none; color: black; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; ">Gradual</a></h1>
             <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/home.png" alt="" style="width: 30px; position: absolute; top: 207px; left: 20px;"><span style="position: absolute; top: 210px; width: 100px; left: 43px;"><a href="index.html" style="text-decoration: none; color: black;">Inicio</a></span></button>
             <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/pesquisa.png" alt="" style="width: 30px; position: absolute; top: 270px; left: 20px;"><span style="position: absolute; top: 270px; width: 100px; left: 55px;">Explorar</span></button>
             <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/comentario.png" alt="" style="width: 30px; position: absolute; top: 330px; left: 20px;"><span style="position: absolute; top: 330px; width: 100px; left: 65px;">Conversas</span></button>
             <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/notificacao.png" alt="" style="width: 30px; position: absolute; top: 390px; left: 20px;"><span style="position: absolute; top: 390px; width: 100px; left: 63px;">Atividade</span></button>
             <button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute;" class="animacao2"><img src="ICONES/adicionar.png" alt="" style="width: 30px; position: absolute; top: 450px; left: 20px;"><span style="position: absolute; top: 450px; width: 100px; left: 41px;">Criar</span></button>
-            <a href="meuPerfil.html" style="text-decoration: none; color: black;"><button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute; cursor: pointer;"><div style="overflow: hidden; border-radius: 999px; width: 50px; height: 50px; margin-top: 530px; margin-left: 15px;"><img src="ICONES/taylor.webp" alt="" style="width: 50px;"></div><span style="position: absolute; top: 540px; width: 200px; left: 30px;">Meu Perfil</span></button></a>
+            <a href="meuPerfil.html" style="text-decoration: none; color: black;"><button style="background-color: transparent; border: 0px; font-size: 24px; position: absolute; cursor: pointer;"><div style="overflow: hidden; border-radius: 999px; width: 50px; height: 50px; margin-top: 530px; margin-left: 15px;"><img src="ICONES/matheusBonitao.enc" alt="" style="width: 50px;"></div><span style="position: absolute; top: 540px; width: 200px; left: 30px;">Meu Perfil</span></button></a>
         </main>
-        <button style="position: fixed; left: 2020px; top: 950px; width: 70px; height: 70px; border: 0px; border-radius: 999px; cursor: pointer; background-color: transparent;" class="animacao">
-            <img src="ICONES/comentario.png" alt="" width="50px">
+        <button style="position: fixed; left: 2020px; top: 950px; width: 70px; height: 70px; border: 0px; border-radius: 999px; cursor: pointer; background-color: transparent; z-index: 3;" class="animacao" onclick="menuConversas(this)" id="botaoAbrirConversa">
+            <div style="width: 60px; height: 60px; overflow: hidden; border-radius: 999px;">
+                <img src="ICONES/willian.jpg" alt="" width="72px">
+            </div>
+            <div style="position: fixed; top: 4px; width: 15px; height: 15px; background-color: rgb(250, 8, 8); border-radius: 999px; left: 42px;">
+
+            </div>
+        </button>
+        <button style="position: fixed; left: 2020px; top: 950px; width: 70px; height: 70px; border: 0px; border-radius: 999px; cursor: pointer; background-color: transparent; z-index: 1; opacity: 0;" class="animacao" onclick="menuConversasSair(this)" id="botaoFecharConversa">
+            <img src="ICONES/X.png" alt="" width="50px">
         </button>
         <main style=" width: 850px; margin: auto;">
             <header id="storys" style="width: 900px; height: 145px; margin-bottom: 30px ; margin-bottom: 50px;">
                 <div style="width: 1500px; margin-top: 10px;">
-                    <img src="ICONES/arnold.jpg" alt="" class="storys" onclick="storys(this)">
+                    <img src="ICONES/matheusBonitao.enc" alt="" class="storys" onclick="storys(this)">
                     <img src="ICONES/leo.jpg" alt="" class="storys" onclick="storys(this)">
                     <img src="ICONES/gustavoTop.jpg" alt="" class="storys" onclick="storys(this)">
                     <img src="ICONES/flavio.jpg" alt="" class="storys" onclick="storys(this)">
@@ -83,34 +118,63 @@
                     <span style="margin-left: 65px;">@kid_33</span>
                 </div>
             </header>
-            <main style="margin-bottom: 40px; padding-bottom: 30px; background-color: transparent;">
-                <header id="perfil" style="width: 400px; height: 60px; display: flex;">
-                    <div style="border-radius: 999px; height: 60px; width: 60px; margin-left: 10px; overflow: hidden; cursor: pointer; background-color: transparent;">
-                        <img src="ICONES/gustavoTop.jpg" alt="" style="width: 60px; ">
-                    </div>
-                    <h2 style="margin-left: 10px; font-size: 22px;">@gustavochad</h2>
-                </header>
-                <div id="feed" style="background-color: transparent;">
-                    <div style="height: 600px; width: 600px; background-color: transparent; margin: auto; overflow: hidden;">
-                        <img src="ICONES/gustavo.png" alt="" style="border-radius: 5px; width: 600px; ">
-                    </div>
-                </div>
-                <div id="funcoes">
-                    <img src="ICONES/like.webp" alt="" style="width: 40px; margin-left: 150px; margin-top: 10px;" class="animacao">
-                    <img src="ICONES/comentario.png" alt="" style="width: 35px; margin-left: 20px; margin-top: 10px;" class="animacao">
-                    <img src="ICONES/compartilhar.png" alt="" style="width: 35px; margin-left: 25px; margin-top: 10px;" class="animacao">
-                </div>
-                <div style="width: 600px; text-align: justify; margin: auto; margin-top: 20px;">
-                    <h3>162 curtidas</h3><br>
-                    <p><b>@gustavochad</b> vai tomando.</p><br>
-                </div>
-            </main>
+    <main style="margin-bottom: 40px; padding-bottom: 30px; background-color: transparent;">
+        <header id="perfil" style="width: 400px; height: 60px; display: flex;">
+            <div style="border-radius: 999px; height: 60px; width: 60px; margin-left: 10px; overflow: hidden; cursor: pointer; background-color: transparent;">
+                <img src="ICONES/gustavoTop.jpg" alt="" style="width: 60px; ">
+            </div>
+            <h2 style="margin-left: 10px; font-size: 22px;">@gustavochad</h2>
+        </header>
+        <div id="feed" style="background-color: transparent;">
+            <div style="height: 600px; width: 600px; background-color: transparent; margin: auto; overflow: hidden;">
+                <img src="ICONES/gustavo.png" alt="" style="border-radius: 5px; width: 600px; ">
+            </div>
+        </div>
+        <div id="funcoes">
+            <img src="ICONES/like.webp" alt="" style="width: 40px; margin-left: 170px; margin-top: 10px;" class="animacao">
+            <img src="ICONES/comentario.png" alt="" style="width: 35px; margin-left: 10px; margin-top: 10px;" class="animacao">
+            <img src="ICONES/compartilhar.png" alt="" style="width: 35px; margin-left: 15px; margin-top: 10px;" class="animacao">
+            <img src="ICONES/salvar.png" alt="" style="width: 35px; margin-left: 375px;" class="animacao">
+        </div>
+        <div style="width: 600px; text-align: justify; margin: auto; margin-top: 20px;">
+            <h3>162 curtidas</h3><br>
+            <p><b>@gustavochad</b> vai tomando.</p><br>
+            <input type="text" placeholder="Comente algo..." style=" background-color: transparent; width: 400px; height: 35px; padding-left: 10px; border-top: 0; border-left: 0; border-right: 0; text-decoration: none; font-size: 18px; outline: none;">
+        </div>
+    </main>
+    <main style="margin-bottom: 40px; padding-bottom: 30px; background-color: transparent;">
+        <header id="perfil" style="width: 400px; height: 60px; display: flex;">
+            <div style="border-radius: 999px; height: 60px; width: 60px; margin-left: 10px; overflow: hidden; cursor: pointer; background-color: transparent;">
+                <img src="ICONES/gustavoTop.jpg" alt="" style="width: 60px; ">
+            </div>
+            <h2 style="margin-left: 10px; font-size: 22px;">@gustavochad</h2>
+        </header>
+        <div id="feed" style="background-color: transparent;">
+            <div style="height: 600px; width: 600px; background-color: transparent; margin: auto; overflow: hidden;">
+                <img src="ICONES/gustavo.png" alt="" style="border-radius: 5px; width: 600px; ">
+            </div>
+        </div>
+        <div id="funcoes">
+            <img src="ICONES/like.webp" alt="" style="width: 40px; margin-left: 170px; margin-top: 10px;" class="animacao">
+            <img src="ICONES/comentario.png" alt="" style="width: 35px; margin-left: 10px; margin-top: 10px;" class="animacao">
+            <img src="ICONES/compartilhar.png" alt="" style="width: 35px; margin-left: 15px; margin-top: 10px;" class="animacao">
+            <img src="ICONES/salvar.png" alt="" style="width: 35px; margin-left: 375px;" class="animacao">
+        </div>
+        <div style="width: 600px; text-align: justify; margin: auto; margin-top: 20px;">
+            <h3>162 curtidas</h3><br>
+            <p><b>@gustavochad</b> vai tomando.</p><br>
+            <input type="text" placeholder="Comente algo..." style=" background-color: transparent; width: 400px; height: 35px; padding-left: 10px; border-top: 0; border-left: 0; border-right: 0; text-decoration: none; font-size: 18px; outline: none;">
+        </div>
+    </main>
+    
+    
+
     </div>
         <div style="width: 100%; height: 1030px; background-color: transparent; position: absolute; top: 0; margin: 0; padding: 0; z-index: 0;" id="fundo" onclick="storySair(this)" >
             
     <span>
         </div>
-            <input style="width: 480px; height: 40px; position: absolute; left: 750px; border-radius: 50px; border-style: solid; top: 890px; z-index: 0; border-width: 2px; border-color: #FDFBFB; background-color: transparent; padding-left: 20px; font-size: 16px; color: #FDFBFB;" placeholder="Digite algo para o gustavinho" id="inputStory" class="elementosStory">
+            <input style="width: 480px; height: 40px; position: absolute; left: 750px; border-radius: 50px; border-style: solid; top: 890px; z-index: 0; border-width: 2px; border-color: #FDFBFB; background-color: transparent; padding-left: 20px; font-size: 16px; color: #FDFBFB; opacity: 0;" placeholder="Digite algo para o gustavinho" id="inputStory" class="elementosStory">
         </input>
             <div id="storyExpandido" style="width: 600px; height: 900px;position: absolute; top: 50px; left: 730px; z-index: 0; overflow: hidden; border-radius: 10px;" class="elementosStory">
         </div>
@@ -125,8 +189,29 @@
                         </div>
                         <h2 style="margin-left: 10px; font-size: 20px; color: #FDFBFB;">@gustavochad</h2>
             </header>
-    </span>
+        </span>
     </main>
+    <main id="menuConversas" style="width: 500px; height: 450px; position: fixed; background-color: #FFFFFF; z-index: 3; left: 1470px; top: 490px; border-radius: 30px; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.096); z-index: 0; opacity: 0; text-align: center;" >
+        <div style="background-color: #2896F3; height: 50px; border-radius: 30px 30px 0px 0px;padding: 5px; padding-left: 20px; display: flex;">
+            <div style="width: 50px; height: 50px; overflow: hidden; background-color: #cacaca; border-radius: 999px;">
+                <img src="ICONES/willian.jpg" alt="" width="52px">
+                <div style="position: fixed; top: 5px; width: 15px; height: 15px; background-color: rgb(28, 253, 20); border-radius: 999px; left: 55px;">
+
+            </div>
+            </div>
+            <h1 style="font-size: 22px; color: #FDFBFB; padding-left: 15px; padding-top: 5px;">willianlendario</h1>
+
+        </div>
+        <div style="display: flex; text-align: center; margin-top: 335px;">
+            <input type="text" name="" id="" placeholder="Digite Algo..." style="width: 390px; border-radius: 20px; border-color: #2896F3; height: 40px; border-width: 3px; font-size: 16px; padding-left: 20px;  outline: none; border-style: solid; margin-left: 20px;">
+            <button style="width: 52px; height: 52px; background-color: #2896F3; border: 0; border-radius: 50%; cursor: pointer; margin-left: 10px;">
+                <img src="ICONES/direct.png" alt="" style="width: 50px;">
+            </button>
+        </div>
+    </main>
+    <main id="menuConversasParede" style="width: 500px; height: 450px; position: fixed; background-color: #f00505; z-index: 3; left: 1470px; top: 490px; border-radius: 10px; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.096); z-index: 1; opacity: 0;">
+    </main>
+    
 </body>
 <script>
     function storys(elemento){
@@ -137,18 +222,19 @@
         const fundo = document.getElementById('fundo');
         const div = document.getElementById('storyExpandido');
         elemento.style.borderColor = '#8C8C8C'
-        inputStory.style.zIndex = '3';
-        directStory.style.zIndex = '3';
-        barraStory.style.zIndex = '3';
-        perfilStory.style.zIndex = '3';
+        inputStory.style.zIndex = '5';
+        directStory.style.zIndex = '5';
+        barraStory.style.zIndex = '5';
+        perfilStory.style.zIndex = '5';
         perfilStory.style.display = 'flex';
-        div.style.zIndex = '2';
+        inputStory.style.opacity = '1';
+        div.style.zIndex = '4';
         div.style.backgroundImage = "url('ICONES/gustavo.png')";
         div.style.backgroundSize = 'cover';
         div.style.backgroundPosition = 'center';
         div.style.backgroundRepeat = 'no-repeat';
         fundo.style.backgroundColor = '#000000';
-        fundo.style.zIndex = '1';
+        fundo.style.zIndex = '3';
     }
     function storySair(elemento){
         const inputStory = document.getElementById('inputStory');
@@ -160,6 +246,7 @@
         inputStory.style.zIndex = '0';
         directStory.style.zIndex = '0';
         barraStory.style.zIndex = '0';
+        inputStory.style.opacity = '0';
         perfilStory.style.zIndex = '0';
         perfilStory.style.display = 'none';
         fundo.style.zIndex = '0';
@@ -167,5 +254,37 @@
         fundo.style.backgroundColor = 'transparent';
         div.style.backgroundImage = "url()";
     }
+    function menuConversas(elemento){
+        const menu = document.getElementById('menuConversas');
+        const parede = document.getElementById('menuConversasParede');
+        const botaoAbrir = document.getElementById('botaoAbrirConversa');
+        const botaoFechar = document.getElementById('botaoFecharConversa');
+        menu.style.zIndex = '2';
+        menu.style.opacity = '1';
+        parede.style.zIndex = '0';
+        botaoAbrir.style.zIndex = '1';
+        botaoAbrir.style.opacity = '0';
+        botaoFechar.style.opacity = '1';
+        botaoFechar.style.zIndex = '3';
+        menu.classList.add('aberto');  
+        botaoFechar.classList.remove('girando');
+        
+    }
+    function menuConversasSair(elemento){
+        const menu = document.getElementById('menuConversas');
+        const parede = document.getElementById('menuConversasParede');
+        const botaoAbrir = document.getElementById('botaoAbrirConversa');
+        const botaoFechar = document.getElementById('botaoFecharConversa');
+        menu.style.zIndex = '0';
+        menu.style.opacity = '0';
+        parede.style.zIndex = '1';
+        botaoAbrir.style.zIndex = '3';
+        botaoFechar.style.zIndex = '1';
+        botaoAbrir.style.opacity = '1';
+        botaoFechar.style.opacity = '0';
+        menu.classList.remove('aberto');
+        botaoFechar.classList.add('girando');
+    }
+    
 </script>
 </html>
